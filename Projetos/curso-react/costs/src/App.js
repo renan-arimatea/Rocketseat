@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import logo192 from "./img/logo192.png"
 import HelloWorld from './components/HelloWorld';
 import SayMyName from './components/SayMyName';
@@ -12,6 +13,10 @@ import Condicional from './components/Condicional';
 import OutraLista from './components/OutraLista.js';
 import SeuNome from './components/SeuNome';
 import Saudacao from './components/Saudacao';
+import Home from './pages/Home';
+import Contato from './pages/Contato';
+import Empresa from './pages/Empresa';
+import Navbar from './components/Navbar';
 
 function App() {
 
@@ -80,6 +85,16 @@ function App() {
       <h2>State Lift</h2>
       <SeuNome setNome={setNome}/>
       <Saudacao nome={nome}/>
+
+      <h2>React Router</h2>
+      <Router>
+         <Navbar/>
+          <Routes>
+              <Route path='/' element={<Home/>}></Route>
+              <Route path='/empresa' element={<Empresa/>}></Route>
+              <Route path='/contato' element={<Contato/>}></Route>
+          </Routes>
+      </Router>
     </div>
   );
 }
