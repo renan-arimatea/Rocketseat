@@ -8,6 +8,7 @@ import List from './components/List';
 import Evento from './components/Evento';
 import Form from './components/Form';
 import Condicional from './components/Condicional';
+import OutraLista from './components/OutraLista.js';
 
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
   }
 
   const url = "https://source.unsplash.com/150x150"
+
+  const meusItens = ["React", "Vue", "Angular"]
 
   return (
     <div className="App">
@@ -64,7 +67,10 @@ function App() {
 
       <h2>Renderização Condicional</h2>
       <Condicional/>
-      
+
+      <h2>Renderização de Listas</h2>
+      <OutraLista itens={meusItens}/>
+      <OutraLista itens={""}/>
     </div>
   );
 }
