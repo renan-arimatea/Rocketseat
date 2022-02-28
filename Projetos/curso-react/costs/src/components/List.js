@@ -3,7 +3,7 @@ import Item from "./Item"
 function List () {
     return (
         <>
-            <h1>Minha Lista</h1>
+            <h3>Minha Lista</h3>
 
             <ul>
                 <Item marca="Nike" ano_lancamento={1920}/>

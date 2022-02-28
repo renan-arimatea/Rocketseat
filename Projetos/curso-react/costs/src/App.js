@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import logo192 from "./img/logo192.png"
 import HelloWorld from './components/HelloWorld';
 import SayMyName from './components/SayMyName';
@@ -9,6 +10,8 @@ import Evento from './components/Evento';
 import Form from './components/Form';
 import Condicional from './components/Condicional';
 import OutraLista from './components/OutraLista.js';
+import SeuNome from './components/SeuNome';
+import Saudacao from './components/Saudacao';
 
 function App() {
 
@@ -23,6 +26,8 @@ function App() {
   const url = "https://source.unsplash.com/150x150"
 
   const meusItens = ["React", "Vue", "Angular"]
+
+  const [nome, setNome]  = useState()
 
   return (
     <div className="App">
@@ -71,6 +76,10 @@ function App() {
       <h2>Renderização de Listas</h2>
       <OutraLista itens={meusItens}/>
       <OutraLista itens={""}/>
+
+      <h2>State Lift</h2>
+      <SeuNome setNome={setNome}/>
+      <Saudacao nome={nome}/>
     </div>
   );
 }
