@@ -4,6 +4,10 @@ import HelloWorld from './components/HelloWorld';
 import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
 import Frase from "./components/Frase"
+import List from './components/List';
+import Evento from './components/Evento';
+import Form from './components/Form';
+import Condicional from './components/Condicional';
 
 function App() {
 
@@ -33,11 +37,13 @@ function App() {
 
       <img src={url} alt="Minha Imagem" />
 
-      <HelloWorld/>
+     
       <SayMyName nome="Dayana"/>
       <SayMyName nome="Pedro"/>
       <SayMyName nome={name}/>
 
+      <h2>Componentes</h2>
+      <HelloWorld/>
       <Frase/>
 
       <Pessoa
@@ -46,6 +52,19 @@ function App() {
       idade="28"
       profissao="Engenheiro de Software"
       />
+
+      <h2>Listas</h2>
+      <List/>
+
+      <h2>Eventos</h2>
+      <Evento/>
+
+      <h2>Formulários</h2>
+      <Form/>
+
+      <h2>Renderização Condicional</h2>
+      <Condicional/>
+      
     </div>
   );
 }
