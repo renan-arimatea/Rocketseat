@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1em;
+
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+}
+
+.nav-menu > li {
+
+    padding: .8rem;
+
+}
+
+.nav-menu > li > button:last-child {
+
+    background-color: blue;
+    color: #ffff;
+    padding: .4em 1em;
+    border: none;
+    border-radius: .3em;
+
+}
